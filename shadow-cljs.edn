@@ -1,0 +1,24 @@
+{:source-paths
+ ["src"
+  "test"]
+
+ :dev-http
+ {8290 "target/browser-test"}
+
+ :dependencies
+ [[binaryage/oops "0.7.2"]
+  [camel-snake-kebab "0.4.2"]]
+
+ :builds
+ {:browser-test
+  {:target :browser-test
+   :ns-regexp "-test$"
+   :runner-ns shadow.test.browser
+   :test-dir "target/browser-test"}
+  :node-test
+  {:target    :node-test
+   :output-to "target/node-tests.js"
+   :ns-regexp "-test$"
+   :autorun   true}
+  }
+ }

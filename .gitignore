@@ -1,0 +1,31 @@
+/public/js
+
+/target
+/checkouts
+/src/gen
+
+pom.xml
+pom.xml.asc
+*.iml
+*.jar
+*.log
+.idea
+.DS_Store
+
+.hgignore
+.hg/
+
+# Leiningen
+/.lein-*
+/.nrepl-port
+
+# Node.js dependencies
+/node_modules/
+
+# shadow-cljs cache, port files
+/.shadow-cljs/
+
+# clj-kondo cache
+/.clj-kondo/.cache
+
+/.env
