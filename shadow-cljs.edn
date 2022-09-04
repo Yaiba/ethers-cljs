@@ -12,13 +12,17 @@
  :builds
  {:browser-test
   {:target :browser-test
-   :ns-regexp "-test$"
+   :ns-regexp "browser-test$"
    :runner-ns shadow.test.browser
    :test-dir "target/browser-test"}
   :node-test
   {:target    :node-test
-   :output-to "target/node-tests.js"
-   :ns-regexp "-test$"
+   :output-to "target/node-test.js"
+   :ns-regexp "node-test$"
    :autorun   true}
+  :ci
+  {:target :karma
+   :output-to "target/ci.js"
+   :ns-regexp "browser-test$"}
   }
  }
