@@ -1,0 +1,18 @@
+default_ecosystem: ethereum
+ethereum:
+  default_network: local
+  local:
+    default_provider: ganache
+
+name: YToken
+plugins:
+  - name: vyper
+  - name: ganache
+#foundry:
+#  port: 8545
+ganache:
+  server:
+    port: 8545
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 5
